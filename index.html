@@ -11,13 +11,8 @@
         <h2 >日記</h2>
     </header>
     <div class="container ms-0" >
-        <div class="row" style="height: 100vh;">
-            <div class="col-sm-2 bg-secondary-subtle shadow-sm ">
-                
-                <ul class="nav flex-column" id="diaryBox">
-                </ul>
-            </div>
-            <div class="col-sm-10">
+        <div class="row " style="height: 100vh;">
+            <div class="col-sm-9">
                 <div class="row my-1">
                     <div class="col">
                         <div class="card shadow-sm">
@@ -38,6 +33,16 @@
                         <button class="btn btn-primary shadow-sm" id="diarySubmit">追加</button>
                     </div>
                 </div>
+            </div>
+            <div class="col-sm-2 bg-secondary-subtle shadow-sm collapse" id="sidebarMenu">
+                
+                <ul class="nav flex-column" id="diaryBox">
+                </ul>
+            </div>
+            <div class="col-sm-1">
+                <button class="btn border border-primary-subtle" data-bs-toggle="collapse" data-bs-target="#sidebarMenu">
+                    ＝
+                </button>
             </div>
         </div>
     </div>
