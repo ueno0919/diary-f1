@@ -8,29 +8,51 @@
 </head>
 <body class="bg-body-tertiary">
     <header>
-        
+        <h2>日記</h2>
     </header>
     <div class="container ms-0" >
         <div class="row" style="height: 100vh;">
             <div class="col-sm-2 ">
-                <h2>日記</h2>
-                <ul class="nav flex-column">
-
-                    <li class="nav-item">タイトル</li>
-                    <li class="nav-item">タイトル２</li>
+                
+                <ul class="nav flex-column" id="diaryBox">
                 </ul>
             </div>
             <div class="col-sm-10">
-                <div class="card">
-                    <div class="card-header">
-                        <label for="title">タイトル</label>
-                        <input type="text" class="form-control" name="title" id="diaryTitle">
+                <div class="row my-1">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                <label for="title">タイトル</label>
+                                <input type="text" class="form-control" name="title" id="diaryTitle">
+                            </div>
+                            <div class="card-body">
+                                <label for="diaryMain">本文</label>
+                                <textarea name="diaryMain" class="form-control" id="diaryContent">
+                                </textarea>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <label for="diaryMain">本文</label>
-                        <textarea name="diaryMain" class="form-control" id="diaryContent">
-                        </textarea>
+                </div>
+                <div class="row my-1">
+                    <div class="col">
+                        <button class="btn btn-primary" id="diarySubmit">追加</button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-diary-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modal-diary-content">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">閉じる</button>
                 </div>
             </div>
         </div>
